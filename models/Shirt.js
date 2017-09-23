@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const {Schema} = mongoos;
+const {Schema} = mongoose;
 
 const ShirtSchema = new Schema({
   name: {
