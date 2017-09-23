@@ -1,0 +1,15 @@
+{
+  "name": "shirt-website",
+  "version": "1.0.0",
+  "description": "A site to direct traffic to my tshirts on Amazon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4",
+    "mongoose": "^4.11.12"
+  }
+}
