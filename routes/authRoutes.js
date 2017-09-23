@@ -9,6 +9,7 @@ module.exports = app => {
       failureFlash: true
     })
   );
+
   app.post(
     '/api/signup',
     passport.authenticate('local-signup', {
@@ -17,8 +18,13 @@ module.exports = app => {
       failureFlash: true
     })
   );
+
   app.get('/api/logout', (req, res) => {
     req.logout();
     res.redirect('/');
+  });
+
+  app.get('/api/current_user', (req, res) => {
+    res.send(req.user);
   });
 };
