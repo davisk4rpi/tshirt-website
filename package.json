@@ -4,14 +4,18 @@
   "description": "A site to direct traffic to my tshirts on Amazon",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "server": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
+    "cookie-session": "^1.3.1",
     "express": "^4.15.4",
-    "mongoose": "^4.11.12"
+    "mongoose": "^4.11.12",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
   }
 }
