@@ -3,7 +3,7 @@ const passport = require('passport');
 module.exports = app => {
   app.post(
     '/api/login',
-    passport.authenticate('local', {
+    passport.authenticate('local-login', {
       successRedirect: '/',
       failureRedirect: '/api/login',
       failureFlash: true
@@ -11,9 +11,9 @@ module.exports = app => {
   );
   app.post(
     '/api/signup',
-    passport.authenticate('local', {
+    passport.authenticate('local-signup', {
       successRedirect: '/',
-      failureRedirect: '/api/login',
+      failureRedirect: '/api/signup',
       failureFlash: true
     })
   );

@@ -15,7 +15,7 @@ passport.deserializeUser((id, done) => {
 });
 
 passport.use(
-  new LocalStrategy((username, password, done) => {
+  new LocalStrategy('local-login', (username, password, done) => {
     User.findOne({ username: username }, (err, user) => {
       if (err) {
         return done(err);
@@ -27,6 +27,27 @@ passport.use(
         return done(null, false, { message: 'Incorrect password.' });
       }
       return done(null, user);
+    });
+  })
+);
+
+passport.use(
+  new LocalStrategy('local-signup', (username, password, done) => {
+    User.findOne({ username: username }, (err, user) => {
+      if (err) {
+        return done(err);
+      }
+      if (user) {
+        return done(null, false, { message: 'Username already exists.' });
+      }
+      const newUser = new User({
+        username
+      });
+      newUser.password = newUser.generateHash(password);
+      newUser.save(function(err) {
+        if (err) throw err;
+        return done(null, newUser);
+      });
     });
   })
 );
