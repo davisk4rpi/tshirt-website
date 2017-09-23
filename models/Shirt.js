@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const {Schema} = mongoose;
+const { Schema } = mongoose;
 
 const ShirtSchema = new Schema({
   name: {
@@ -16,9 +16,10 @@ const ShirtSchema = new Schema({
   },
   imageURL: {
     type: String,
-    require: [true, "Image URL is Required"]
-  }
+    require: [true, 'Image URL is Required']
+  },
   description: String
 });
 
 const Shirt = mongoose.model('shirt', ShirtSchema);
+module.exports = Shirt;
