@@ -7,6 +7,7 @@ module.exports = app => {
     const shirts = await Shirt.find({});
     res.send(shirts);
   });
+
   app.post('/api/shirts', requireLogin, async (req, res) => {
     const { values } = req;
     const shirt = new Shirt(values);
