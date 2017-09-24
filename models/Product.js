@@ -18,7 +18,8 @@ const ProductSchema = new Schema({
     type: String,
     require: [true, 'Image URL is Required']
   },
-  description: String
+  description: String,
+  tags: [String]
 });
 
 const Product = mongoose.model('product', ProductSchema);
