@@ -6,7 +6,7 @@ import * as actions from '../actions';
 
 import '../assets/styles/App.css';
 import Header from './Header';
-import Signup from './Signup';
+
 import Login from './Login';
 
 class App extends Component {
@@ -20,7 +20,6 @@ class App extends Component {
         <main>
           <Header />
           <Container className="App">
-            <Route exact path="/signup" component={Signup} />
             <Route exact path="/login" component={Login} />
             <p className="App-intro" />
           </Container>
