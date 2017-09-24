@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchProducts } from '../actions';
+import { fetchProducts } from '../../actions';
 
 import ProductListItem from './ProductListItem';
 
@@ -28,4 +28,4 @@ function mapStateToProps({ products }) {
   return { products };
 }
 
-export default connect(mapStateToProps, { fetchProducts })(PoductList);
+export default connect(mapStateToProps, { fetchProducts })(ProductList);
