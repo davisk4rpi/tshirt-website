@@ -4,8 +4,8 @@ import ProductForm from './ProductForm';
 import { createProduct } from '../../actions';
 
 class ProductNew extends Component {
-  onEntry = (values, dispatch) => {
-    this.props.createProduct(values);
+  onEntry = async (values, dispatch) => {
+    await this.props.createProduct(values);
     this.props.history.push('/dashboard');
   };
 

@@ -10,7 +10,6 @@ module.exports = app => {
 
   app.post('/api/products', requireLogin, async (req, res) => {
     const { body } = req;
-    console.log(body);
     const product = new Product(body);
     try {
       const savedProduct = await product.save();
