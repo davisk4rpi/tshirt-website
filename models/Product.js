@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-const ShirtSchema = new Schema({
+const ProductSchema = new Schema({
   name: {
     type: String,
     require: [true, 'Name is Required']
@@ -21,5 +21,5 @@ const ShirtSchema = new Schema({
   description: String
 });
 
-const Shirt = mongoose.model('shirt', ShirtSchema);
-module.exports = Shirt;
+const Product = mongoose.model('product', ProductSchema);
+module.exports = Product;

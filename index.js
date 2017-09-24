@@ -5,7 +5,7 @@ const passport = require('passport');
 const bodyParser = require('body-parser');
 
 const keys = require('./config/keys');
-require('./models/Shirt');
+require('./models/Product');
 require('./models/User');
 require('./services/passport');
 
@@ -30,7 +30,7 @@ app.use(passport.session());
 
 // shorthand version instead of assign the 'require' to a const first.
 require('./routes/authRoutes')(app);
-require('./routes/shirtRoutes')(app);
+require('./routes/productRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
   // Express will serve up production assets
