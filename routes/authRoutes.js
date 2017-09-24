@@ -10,14 +10,15 @@ module.exports = app => {
     })
   );
 
-  app.post(
-    '/api/signup',
-    passport.authenticate('local-signup', {
-      successRedirect: '/',
-      failureRedirect: '/api/signup',
-      failureFlash: true
-    })
-  );
+  // Disabled registration route, only need one user for now
+  // app.post(
+  //   '/api/signup',
+  //   passport.authenticate('local-signup', {
+  //     successRedirect: '/',
+  //     failureRedirect: '/api/signup',
+  //     failureFlash: true
+  //   })
+  // );
 
   app.get('/api/logout', (req, res) => {
     req.logout();
