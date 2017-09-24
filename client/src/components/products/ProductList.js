@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { List } from 'semantic-ui-react';
-import { fetchProducts } from '../../actions';
+import { fetchProducts, deleteProduct } from '../../actions';
 
 import ProductListItem from './ProductListItem';
 
@@ -10,9 +10,19 @@ class ProductList extends Component {
     this.props.fetchProducts();
   }
 
+  handleDelete = id => {
+    this.props.deleteProduct(id);
+  };
+
   renderProducts() {
     return this.props.products.map(product => {
-      return <ProductListItem product={product} key={product.name} />;
+      return (
+        <ProductListItem
+          product={product}
+          key={product.name}
+          handleDelete={this.handleDelete}
+        />
+      );
     });
   }
 
@@ -31,4 +41,6 @@ function mapStateToProps({ products }) {
   return { products };
 }
 
-export default connect(mapStateToProps, { fetchProducts })(ProductList);
+export default connect(mapStateToProps, { fetchProducts, deleteProduct })(
+  ProductList
+);

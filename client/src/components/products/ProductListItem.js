@@ -1,7 +1,7 @@
 import React from 'react';
-import { List, Image } from 'semantic-ui-react';
+import { List, Image, Button } from 'semantic-ui-react';
 
-const ProductListItem = ({ product }) => {
+const ProductListItem = ({ product, handleDelete }) => {
   return (
     <List.Item>
       <Image avatar src={product.imageURL} />
@@ -13,6 +13,12 @@ const ProductListItem = ({ product }) => {
           {product.link}
         </List.Description>
       </List.Content>
+      <Button
+        icon="delete"
+        floated="right"
+        onClick={() => handleDelete(product._id)}
+        color="red"
+      />
     </List.Item>
   );
 };
