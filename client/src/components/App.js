@@ -7,6 +7,7 @@ import * as actions from '../actions';
 import '../assets/styles/App.css';
 import Header from './Header';
 import Dashboard from './Dashboard';
+import ProductNew from './products/ProductNew';
 import Login from './Login';
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
           <Container>
             <Route exact path="/login" component={Login} />
             <Route exact path="/Dashboard" component={Dashboard} />
+            <Route exact path="/products/new" component={ProductNew} />
           </Container>
         </main>
       </BrowserRouter>

@@ -9,8 +9,9 @@ module.exports = app => {
   });
 
   app.post('/api/products', requireLogin, async (req, res) => {
-    const { values } = req;
-    const product = new Product(values);
+    const { body } = req;
+    console.log(body);
+    const product = new Product(body);
     try {
       const savedProduct = await product.save();
       res.send(savedProduct);

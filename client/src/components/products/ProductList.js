@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { List } from 'semantic-ui-react';
 import { fetchProducts } from '../../actions';
 
 import ProductListItem from './ProductListItem';
@@ -11,14 +12,16 @@ class ProductList extends Component {
 
   renderProducts() {
     return this.props.products.map(product => {
-      return <ProductListItem product={product} key={product.id} />;
+      return <ProductListItem product={product} key={product.name} />;
     });
   }
 
   render() {
     return (
-      <section>
-        {this.renderProducts()}
+      <section id="productList">
+        <List divided relaxed size="massive">
+          {this.renderProducts()}
+        </List>
       </section>
     );
   }

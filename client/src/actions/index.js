@@ -19,3 +19,8 @@ export const fetchProducts = () => async dispatch => {
   const res = await axios.get('/api/products');
   dispatch({ type: FETCH_PRODUCTS, payload: res.data });
 };
+
+export const createProduct = values => async dispatch => {
+  const res = await axios.post('/api/products', values);
+  dispatch({ type: null, payload: res.data });
+};

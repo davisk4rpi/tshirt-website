@@ -6,7 +6,7 @@ import { Form, Button } from 'semantic-ui-react';
 class AuthForm extends Component {
   render() {
     return (
-      <div id="eventForm">
+      <div id="authForm">
         <h2>
           {this.props.formTitle}
         </h2>
