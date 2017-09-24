@@ -17,7 +17,7 @@ passport.deserializeUser((id, done) => {
 passport.use(
   'local-login',
   new LocalStrategy((username, password, done) => {
-    User.findOne({ username: username }, (err, user) => {
+    User.findOne({ username }, (err, user) => {
       if (err) {
         return done(err);
       }
@@ -35,7 +35,7 @@ passport.use(
 passport.use(
   'local-signup',
   new LocalStrategy((username, password, done) => {
-    User.findOne({ username: username }, (err, user) => {
+    User.findOne({ username }, (err, user) => {
       if (err) {
         return done(err);
       }
