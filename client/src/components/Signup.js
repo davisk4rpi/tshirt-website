@@ -7,6 +7,7 @@ import { createUser } from '../actions';
 class Signup extends Component {
   onSignUp = (values, dispatch) => {
     this.props.createUser(values);
+    this.props.history.push('/');
   };
 
   render() {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Form } from 'semantic-ui-react';
 
-const FormField = ({ type, label }) => {
-  return <Form.Input label={label} type={type} />;
+const FormField = ({ type, label, input }) => {
+  return <Form.Input {...input} label={label} type={type} />;
 };
 
 export default FormField;
