@@ -24,3 +24,8 @@ export const createProduct = values => async dispatch => {
   const res = await axios.post('/api/products', values);
   dispatch({ type: null, payload: res.data });
 };
+
+export const deleteProduct = id => async dispatch => {
+  const res = await axios.delete(`/api/products/${id}`);
+  dispatch({ type: FETCH_PRODUCTS, payload: res.data });
+};
