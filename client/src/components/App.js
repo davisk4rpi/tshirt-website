@@ -6,7 +6,7 @@ import * as actions from '../actions';
 
 import '../assets/styles/App.css';
 import Header from './Header';
-
+import Dashboard from './Dashboard';
 import Login from './Login';
 
 class App extends Component {
@@ -19,9 +19,9 @@ class App extends Component {
       <BrowserRouter>
         <main>
           <Header />
-          <Container className="App">
+          <Container>
             <Route exact path="/login" component={Login} />
-            <p className="App-intro" />
+            <Route exact path="/Dashboard" component={Dashboard} />
           </Container>
         </main>
       </BrowserRouter>

@@ -32,7 +32,7 @@ class Header extends Component {
   render() {
     return (
       <header id="header">
-        <Menu pointing secondary>
+        <Menu size="huge" pointing secondary>
           <Menu.Item position="left" header>
             Emphasis Designs
           </Menu.Item>
