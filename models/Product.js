@@ -19,7 +19,11 @@ const ProductSchema = new Schema({
     require: [true, 'Image URL is Required']
   },
   description: String,
-  tags: [String]
+  tags: [String],
+  priority: {
+    type: Number,
+    default: 2
+  }
 });
 
 const Product = mongoose.model('product', ProductSchema);

@@ -4,7 +4,7 @@ const requireLogin = require('../middlewares/requireLogin');
 
 module.exports = app => {
   app.get('/api/products', async (req, res) => {
-    const products = await Product.find({});
+    const products = await Product.find({}).sort({ priority: 1 });
     res.send(products);
   });
 
