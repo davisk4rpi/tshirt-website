@@ -18,4 +18,11 @@ module.exports = app => {
       res.status(422).send(err);
     }
   });
+
+  app.delete('/api/products/:id', requireLogin, async (req, res) => {
+    const product = await Product.findById(req.params.id);
+    await product.remove();
+    const products = await Product.find({}).sort({ priority: 1 });
+    res.send(products);
+  });
 };
