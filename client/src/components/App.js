@@ -10,6 +10,7 @@ import ProductGallery from './products/ProductGallery';
 import Dashboard from './Dashboard';
 import ProductNew from './products/ProductNew';
 import Login from './Login';
+import Banner from './Banner';
 
 class App extends Component {
   componentDidMount() {
@@ -20,7 +21,9 @@ class App extends Component {
     return (
       <BrowserRouter>
         <main>
+          <div id="bg-image" />
           <Header />
+          <Route exact path="/" component={Banner} />
           <Container>
             <Route exact path="/" component={ProductGallery} />
             <Route exact path="/login" component={Login} />

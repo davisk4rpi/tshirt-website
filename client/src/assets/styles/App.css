@@ -2,3 +2,52 @@
 #dashboard {
   margin-top: 50px;
 }
+
+#bg-image {
+  position: fixed;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background-image: url('/img/dope.png');
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+header {
+  background-color: white;
+}
+
+#banner {
+  height: 400px;
+  max-width: 1440px;
+  background-color: rgba(222, 222, 222, 0.9);
+  border-radius: 5px;
+  margin: 75px auto;
+  padding: 40px 10%;
+}
+
+@media only screen and (max-width: 1500px) {
+  #banner {
+    margin: 75px 30px;
+  }
+}
+
+@media only screen and (max-width: 788px) {
+  #banner {
+    margin: 75px 10px;
+  }
+}
+
+#banner h1 {
+  font-size: 4rem;
+}
+
+#productGallery .ui.card > .image {
+  max-height: 320px;
+  margin: auto;
+}

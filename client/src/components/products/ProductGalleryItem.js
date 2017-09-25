@@ -1,15 +1,18 @@
 import React from 'react';
-import { Card, Image, Button } from 'semantic-ui-react';
+import { Card, Grid } from 'semantic-ui-react';
 
 const ProductGalleryItem = ({ product, handleDelete }) => {
   return (
-    <Card
-      image={product.imageURL}
-      header={product.name}
-      href={product.link}
-      description={product.description}
-      extra={product.price}
-    />
+    <Grid.Column mobile={12} tablet={8} computer={4}>
+      <Card
+        fluid
+        image={product.imageURL}
+        header={product.name}
+        href={product.link}
+        description={product.description}
+        extra={product.price}
+      />
+    </Grid.Column>
   );
 };
 

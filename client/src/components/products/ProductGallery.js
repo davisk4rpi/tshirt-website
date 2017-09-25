@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Card } from 'semantic-ui-react';
+import { Card, Grid } from 'semantic-ui-react';
 import { fetchProducts, deleteProduct } from '../../actions';
 
 import ProductGalleryItem from './ProductGalleryItem';
@@ -28,11 +28,9 @@ class ProductGallery extends Component {
 
   render() {
     return (
-      <section id="productGallery">
-        <Card.Group itemsPerRow={4} stackable>
-          {this.renderProducts()}
-        </Card.Group>
-      </section>
+      <Grid id="productGallery" centered as={Card.Group}>
+        {this.renderProducts()}
+      </Grid>
     );
   }
 }
