@@ -11,6 +11,7 @@ const ProductGalleryItem = ({ product, handleDelete }) => {
         href={product.link}
         description={product.description}
         extra={`$${product.price} at Amazon.com`}
+        target="_data"
       />
     </Grid.Column>
   );

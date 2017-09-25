@@ -3,6 +3,11 @@
   margin-top: 50px;
 }
 
+#productList {
+  padding: 20px;
+  background-color: #fff;
+}
+
 #bg-image {
   position: fixed;
   z-index: -2;

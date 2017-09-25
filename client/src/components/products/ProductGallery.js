@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Card, Grid, Header } from 'semantic-ui-react';
+import { Card, Grid } from 'semantic-ui-react';
 import { fetchProducts, deleteProduct } from '../../actions';
 
 import ProductGalleryItem from './ProductGalleryItem';

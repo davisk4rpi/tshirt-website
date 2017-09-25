@@ -19,7 +19,7 @@ class ProductList extends Component {
       return (
         <ProductListItem
           product={product}
-          key={product.name}
+          key={product._id}
           handleDelete={this.handleDelete}
         />
       );
