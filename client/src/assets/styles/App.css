@@ -22,13 +22,17 @@ header {
   background-color: white;
 }
 
+header a {
+  color: inherit;
+}
+
 #banner {
   height: 400px;
   max-width: 1440px;
   background-color: rgba(222, 222, 222, 0.9);
   border-radius: 5px;
   margin: 75px auto;
-  padding: 40px 10%;
+  padding: 40px 15%;
 }
 
 @media only screen and (max-width: 1500px) {

@@ -10,7 +10,7 @@ const ProductGalleryItem = ({ product, handleDelete }) => {
         header={product.name}
         href={product.link}
         description={product.description}
-        extra={product.price}
+        extra={`$${product.price} at Amazon.com`}
       />
     </Grid.Column>
   );

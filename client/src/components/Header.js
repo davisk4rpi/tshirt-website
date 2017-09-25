@@ -35,7 +35,7 @@ class Header extends Component {
         <Menu size="huge" pointing secondary>
           <Container>
             <Menu.Item position="left" header>
-              Emphasis Designs
+              <Link to="/">Dope Shirts</Link>
             </Menu.Item>
             {this.renderContent()}
           </Container>
