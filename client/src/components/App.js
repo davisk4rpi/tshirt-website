@@ -6,6 +6,7 @@ import * as actions from '../actions';
 
 import '../assets/styles/App.css';
 import Header from './Header';
+import Footer from './Footer';
 import ProductGallery from './products/ProductGallery';
 import Dashboard from './Dashboard';
 import ProductNew from './products/ProductNew';
@@ -24,12 +25,13 @@ class App extends Component {
           <div id="bg-image" />
           <Header />
           <Route exact path="/" component={Banner} />
-          <Container>
+          <Container id="mainBody">
             <Route exact path="/" component={ProductGallery} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/Dashboard" component={Dashboard} />
             <Route exact path="/products/new" component={ProductNew} />
           </Container>
+          <Footer />
         </main>
       </BrowserRouter>
     );
